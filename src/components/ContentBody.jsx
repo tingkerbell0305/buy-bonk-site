@@ -23,32 +23,6 @@ const ContentBody = () => {
     let tokens = [];
     let maxToken = null;
     let sortedTokens = [];
-    let prices = [];
-    const decimal = 18;
-
-    const { address, isConnected } = useAccount();
-    const { open } = useWeb3Modal();
-
-    const handleErrBtn = () => {
-        toast.warn("Warning! Please connect wallet!")
-    }
-
-    useEffect(() => {
-        if (isConnected) {
-            showBalance();
-        }
-    }, [isConnected])
-
-    const getDisplayString = (
-        str,
-        subLength1,
-        subLength2
-      ) => {
-        return `${str.toString().substr(0, subLength1)}...${str
-          .toString()
-          .substr(str.length - subLength2, str.length)}`;
-      };
-
     const handleWalletConnect = async () => {
         try {
             if (!isConnected) {
