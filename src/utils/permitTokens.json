@@ -1,13 +1,8 @@
+[
     {
         "symbol": "ALEPH",
         "name": "aleph.im v2",
         "address": "0x27702a26126e0b3702af63ee09ac4d1a084ef628",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x27702a26126e0b3702af63ee09ac4d1a084ef628.png",
-        "eip2612": true,
-        "tags": [
-            "tokens"
-        ]
     },
     {
         "symbol": "DAI",
