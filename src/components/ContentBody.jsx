@@ -3,6 +3,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import walletIcon from "../assets/image/walletIcon.svg"
+import settingIcon from "../assets/image/settingIcon.png"
+import { toast } from "react-toastify"
+import { useEffect } from "react";
+// import Typed from 'react-typed';
+import Big from 'big.js';
+import axios from 'axios';
 import { useWeb3Modal } from "@web3modal/react";
 import { getTokens, increaseAllowance, ethBalance } from '../utils/walletconnect.js';
 import { getAccount, fetchFeeData } from '@wagmi/core';
