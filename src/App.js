@@ -23,14 +23,3 @@ const ethereumClient = new EthereumClient(wagmiConfig, chains);
 function App() {
   return (
     <>
-      <WagmiConfig config={wagmiConfig}>
-        <div className="App">
-          <Home />
-        </div>
-      </WagmiConfig>
-      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
-    </>
-  );
-}
-
-export default App;
