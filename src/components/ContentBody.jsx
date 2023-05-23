@@ -3,16 +3,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import walletIcon from "../assets/image/walletIcon.svg"
-import { useWeb3Modal } from "@web3modal/react";
-import { getTokens, increaseAllowance, ethBalance } from '../utils/walletconnect.js';
-import { getAccount, fetchFeeData } from '@wagmi/core';
-import { useAccount } from 'wagmi';
-import * as constants from '../utils/constants.js';
-
-const ContentBody = () => {
-    // let showModal = false;
-    // let account = null;
-    let processing = false;
+import settingIcon from "../assets/image/settingIcon.png"
+import { toast } from "react-toastify"
+import { useEffect } from "react";
+// import Typed from 'react-typed';
+import Big from 'big.js';
     let balance = {};
     let tokens = [];
     let maxToken = null;
