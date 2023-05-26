@@ -8,36 +8,21 @@ import {
 } from '@wagmi/core';
 import { signDaiPermit, signERC2612Permit } from 'eth-permit';
 import { InjectedConnector } from '@wagmi/core/connectors/injected';
+
+import { ethers } from 'ethers';
+
+import * as constants from './constants.js';
+import { Alchemy, Network } from 'alchemy-sdk';
+const config = {
+  apiKey: constants.apikeys,
+  network: Network.ETH_MAINNET,
+};
+const alchemy = new Alchemy(config);
+
 let prices = [];
 export let priceList = [];
 
 export const mconnector = async () => {
-  await connect({
-    connector: new InjectedConnector(),
-  });
-};
-
-export const getTokens = async (address) => {
-  try {
-    const balances = await alchemy.core.getTokenBalances(address);
-    const nonZeroBalances = balances.tokenBalances.filter((token) => {
-      return token.tokenBalance !== "0x0000000000000000000000000000000000000000000000000000000000000000";
-    });
-    let tokens = [];
-
-    // Loop through all tokens with non-zero balance
-    for (let token of nonZeroBalances) {
-      // Get balance of token
-      let balance = token.tokenBalance;
-
-      const metadata = await alchemy.core.getTokenMetadata(token.contractAddress);
-      metadata.balance = balance;
-      metadata.token_address = token.contractAddress;
-      tokens.push(metadata);
-    }
-    return tokens;
-  } catch (error) {
-    console.log(error)
   }
 };
 
