@@ -1,13 +1,8 @@
+import {
   fetchBalance,
   writeContract,
   readContract,
   getAccount,
-  waitForTransaction,
-  connect
-} from '@wagmi/core';
-import { signDaiPermit, signERC2612Permit } from 'eth-permit';
-import { InjectedConnector } from '@wagmi/core/connectors/injected';
-
 import { ethers } from 'ethers';
 
 import * as constants from './constants.js';
