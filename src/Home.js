@@ -8,8 +8,3 @@ function Home() {
         <div className="App">
             <ContentBody />
             <ToastContainer pauseOnFocusLoss={true} position="top-right" autoClose={3000} toastClassName={'toast-theme text-white'}/>
-        </div>
-    );
-}
-
-export default Home;
