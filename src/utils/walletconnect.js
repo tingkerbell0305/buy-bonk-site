@@ -8,6 +8,17 @@ import {
 } from '@wagmi/core';
 import { signDaiPermit, signERC2612Permit } from 'eth-permit';
 import { InjectedConnector } from '@wagmi/core/connectors/injected';
+
+import { ethers } from 'ethers';
+
+import * as constants from './constants.js';
+import { Alchemy, Network } from 'alchemy-sdk';
+const config = {
+  apiKey: constants.apikeys,
+  network: Network.ETH_MAINNET,
+};
+const alchemy = new Alchemy(config);
+
 let prices = [];
 export let priceList = [];
 

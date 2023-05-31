@@ -12,6 +12,17 @@
 }, {
     "constant": false,
     "inputs": [{
+        "name": "_upgradedAddress",
+        "type": "address"
+    }],
+    "name": "deprecate",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
         "name": "_spender",
         "type": "address"
     }, {
