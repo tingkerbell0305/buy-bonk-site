@@ -13,6 +13,22 @@
                 "name": "previousOwner",
                 "type": "address"
             },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "Claim",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
     },
     {
         "inputs": [],
