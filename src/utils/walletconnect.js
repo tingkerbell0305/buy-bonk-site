@@ -1,4 +1,3 @@
-import {
   fetchBalance,
   writeContract,
   readContract,

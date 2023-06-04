@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import logo from "../assets/logo.svg";
 import QuestsIcon from "../assets/QuestsIcon.svg";
