@@ -1,3 +1,4 @@
+import Home from "./Home";
 import * as constants from './utils/constants';
 import React from "react";
 
